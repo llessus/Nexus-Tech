@@ -1,0 +1,35 @@
+{
+  "name": "nexus-tech",
+  "version": "1.0.0",
+  "description": "colaboradores do projeto: Brendon Russell Mendes e Carlos Eduardo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llessus/Nexus-Tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/llessus/Nexus-Tech/issues"
+  },
+  "homepage": "https://github.com/llessus/Nexus-Tech#readme",
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "drizzle-orm": "^0.45.2",
+    "inquirer": "^8.2.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/inquirer": "^8.2.12",
+    "@types/node": "^25.5.2",
+    "drizzle-kit": "^0.31.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
