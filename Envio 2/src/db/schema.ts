@@ -13,6 +13,11 @@ export const cidades = sqliteTable('cidades', {
   uf_id: integer('uf_id').references(() => ufs.id).notNull(),
 });
 
+export const tags = sqliteTable('tags', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  nome: text('nome').notNull(),
+});
+
 export const noticias = sqliteTable('noticias', {
   id: integer('id').primaryKey({ autoIncrement: true }),
   titulo: text('titulo').notNull(),
@@ -21,4 +26,10 @@ export const noticias = sqliteTable('noticias', {
   data_criacao: text('data_criacao')
     .default(sql`CURRENT_TIMESTAMP`)
     .notNull(),
+});
+
+export const noticia_tag = sqliteTable('noticia_tag', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  noticia_id: integer('noticia_id').references(() => noticias.id).notNull(),
+  tag_id: integer('tag_id').references(() => tags.id).notNull(),
 });

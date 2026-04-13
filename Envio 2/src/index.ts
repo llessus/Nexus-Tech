@@ -21,7 +21,8 @@ async function main() {
       { name: '4 - Notícias agrupadas por estado', value: 4 },
       { name: '5 - Cadastrar UF', value: 5 },
       { name: '6 - Cadastrar cidade', value: 6 },
-      { name: '7 - Sair', value: 7 },
+      { name: '7 - Cadastrar TAG', value: 7 },
+      { name: '8 - Sair', value: 8 },
     ]
   }]);
 
@@ -33,7 +34,8 @@ async function main() {
     case 4: await listarAgrupado(); break;
     case 5: await cadastrarUF(); break;
     case 6: await cadastrarCidade(); break;
-    case 7: process.exit();
+    case 7: await cadastrarTag(); break;
+    case 8: process.exit();
   }
   main(); // Volta ao menu
 }
@@ -123,6 +125,14 @@ async function cadastrarCidade() {
   console.log("Cidade cadastrada!");
 }
 
+async function cadastrarTag() {
+  const res = await inquirer.prompt([
+    { name: 'nome', message: 'Nome da TAG:' }
+  ]);
+  await db.insert(schema.tags).values(res);
+  console.log("TAG cadastrada!");
+}
+
 async function cadastrarNoticia() {
   const cidades = await db.select({
     id: schema.cidades.id,
@@ -136,6 +146,8 @@ async function cadastrarNoticia() {
     console.log("⚠️ Nenhuma cidade cadastrada no banco de dados! Por favor, cadastre uma Cidade primeiro (Opção 6).");
     return;
   }
+  
+  const tags = await db.select().from(schema.tags);
 
   const res = await inquirer.prompt([
     { name: 'titulo', message: 'Título:' },
@@ -148,13 +160,37 @@ async function cadastrarNoticia() {
       choices: cidades.map(c => ({ name: `${c.nome} - ${c.uf}`, value: c.id })) 
     }
   ]);
-  await db.insert(schema.noticias).values(res);
+  
+  const inseridos = await db.insert(schema.noticias).values(res).returning({ id: schema.noticias.id });
+  const noticiaId = inseridos[0].id;
+  
+  if (tags.length > 0) {
+    const { tagsSelecionadas } = await inquirer.prompt([
+      {
+        type: 'checkbox',
+        name: 'tagsSelecionadas',
+        message: 'Selecione as TAGs para esta notícia (Opcional):',
+        choices: tags.map(t => ({ name: t.nome, value: t.id }))
+      }
+    ]);
+    
+    if (tagsSelecionadas && tagsSelecionadas.length > 0) {
+      for (const tagId of tagsSelecionadas) {
+        await db.insert(schema.noticia_tag).values({
+          noticia_id: noticiaId,
+          tag_id: tagId
+        });
+      }
+    }
+  }
+
   console.log("Notícia cadastrada!");
 }
 
 async function listarAgrupado() {
   console.log("\n--- LISTA AGRUPADA POR ESTADOS ---");
   const dados = await db.select({
+    id: schema.noticias.id,
     titulo: schema.noticias.titulo,
     texto: schema.noticias.texto,
     cidade: schema.cidades.nome,
@@ -188,7 +224,17 @@ async function listarAgrupado() {
       const { num } = await inquirer.prompt([{ name: 'num', message: 'Informe o número da notícia:' }]);
       const selecionada = dados[parseInt(num) - 1];
       if (selecionada) {
-        console.log(`\nTítulo: ${selecionada.titulo}\nTexto : ${selecionada.texto}\n`);
+        // Buscar tags da notícia
+        const tagsDaNoticia = await db.select({ nome: schema.tags.nome })
+          .from(schema.noticia_tag)
+          .innerJoin(schema.tags, eq(schema.noticia_tag.tag_id, schema.tags.id))
+          .where(eq(schema.noticia_tag.noticia_id, selecionada.id));
+        
+        const tagsNomes = tagsDaNoticia.map(t => t.nome).join(', ');
+        
+        console.log(`\nTítulo: ${selecionada.titulo}`);
+        console.log(`Texto : ${selecionada.texto}`);
+        console.log(`TAGs  : ${tagsNomes ? tagsNomes : 'Nenhuma'}\n`);
       } else {
         console.log('Notícia não encontrada.\n');
       }
