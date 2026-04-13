@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca por Estado (UF) - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Fake News
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="busca_uf.html" class="active">Busca por UF</a>
+                <a href="busca_tag.html">Busca por Tag</a>
+                <a href="login.html" class="btn btn-primary" style="color: white;">Login / Cadastro</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header" style="flex-direction: column; align-items: flex-start; gap: 1.5rem;">
+            <h1 class="page-title">Últimas notícias da sua região</h1>
+            
+            <form style="display: flex; gap: 1rem; width: 100%; max-width: 600px;" onsubmit="event.preventDefault();">
+                <div style="flex: 1;">
+                    <select class="form-control" style="background-color: var(--bg-secondary);">
+                        <option value="">Selecione o Estado (UF)</option>
+                        <option value="DF" selected>Distrito Federal (DF)</option>
+                        <option value="SP">São Paulo (SP)</option>
+                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                        <option value="MG">Minas Gerais (MG)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary">Buscar</button>
+            </form>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem; color: var(--text-secondary);">Exibindo 2 resultados para "Distrito Federal (DF)"</h3>
+
+        <div class="grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1541888035293-9c882ce997e3?auto=format&fit=crop&q=80&w=400&h=200" alt="Notícia" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Política</span>
+                    <h2 class="card-title"><a href="detalhe_noticia.html">Brasília ganha praia artificial usando lágrimas de contribuintes</a></h2>
+                    <p class="card-meta">Por Correspondente Local • 11 de Abril, 2026</p>
+                    <p class="card-text">Projeto inovador de climatização da capital promete refrescar os ânimos com as tributações do ano passado.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1555861496-faa3eaf4edc3?auto=format&fit=crop&q=80&w=400&h=200" alt="Notícia" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Cotidiano</span>
+                    <h2 class="card-title"><a href="detalhe_noticia.html">Céu de Brasília é tombado como patrimônio imaterial da procrastinação contemplativa</a></h2>
+                    <p class="card-meta">Por Admin Especialista • 05 de Abril, 2026</p>
+                    <p class="card-text">Iphan decide que olhar fixamente para as nuvens em um fim de tarde deve se tornar direito trabalhista.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fake News.</p>
+    </footer>
+</body>
+</html>

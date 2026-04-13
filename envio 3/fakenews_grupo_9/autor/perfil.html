@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Autor - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Painel do Autor
+            </a>
+            <div class="nav-links">
+                <a href="perfil.html" class="active">Meu Perfil</a>
+                <a href="minhas_noticias.html">Minhas Notícias</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="max-width: 800px;">
+        <div class="page-header">
+            <h1 class="page-title">Configurações de Perfil</h1>
+        </div>
+
+        <div class="auth-card" style="max-width: 100%; border: none; padding: 0;">
+            <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                
+                <!-- Foto de Perfil -->
+                <div style="text-align: center;">
+                    <img src="https://ui-avatars.com/api/?name=Autor+Logado&background=3B82F6&color=fff&size=200" alt="Sua Foto" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 4px solid var(--border-color);">
+                    <br>
+                    <button class="btn btn-secondary btn-sm" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Alterar Foto</button>
+                </div>
+
+                <!-- Formulário de Atualização -->
+                <form onsubmit="event.preventDefault(); alert('Perfil atualizado com sucesso!');" style="flex: 1;">
+                    <div class="form-group">
+                        <label>Nome Público</label>
+                        <input type="text" class="form-control" value="Autor Logado">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>E-mail (Login)</label>
+                        <input type="email" class="form-control" value="autor@fakenews.com.br" readonly style="opacity: 0.7; cursor: not-allowed;">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Biografia / Sobre mim</label>
+                        <textarea class="form-control" rows="4">Jornalista especializado em fatos não ocorridos. Apaixonado por manchetes caça-cliques e verdades alternativas.</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nova Senha</label>
+                        <input type="password" class="form-control" placeholder="Deixe em branco para manter a atual">
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CRUD Tags - Superadmin</title><link rel="stylesheet" href="../assets/css/estilo.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white}.crud-layout{display:flex;gap:2rem;align-items:flex-start}.crud-form{flex:1;background:var(--bg-secondary);padding:1.5rem;border-radius:1rem;border:1px solid var(--border-color);position:sticky;top:100px}.crud-list{flex:2}</style></head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container"><a href="dashboard.html" class="logo-link"><div style="background:white;padding:0.5rem;border-radius:8px;color:var(--danger)">SA</div>Superadmin</a></div>
+    </nav>
+    <main class="container">
+        <div class="page-header"><h1 class="page-title">Gerenciar Tags</h1><a href="dashboard.html" class="btn btn-secondary">Voltar</a></div>
+        <div class="crud-layout">
+            <form class="crud-form" onsubmit="event.preventDefault();">
+                <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Adicionar Tag</h3>
+                <div class="form-group"><label>Nome da Tag</label><input type="text" class="form-control" placeholder="Ex: Política"></div>
+                <div style="display:flex;gap:0.5rem;margin-top:2rem;"><button type="submit" class="btn btn-primary" style="flex:1;"><i class="fas fa-save"></i> Salvar</button></div>
+            </form>
+            <div class="crud-list">
+                <div class="table-container">
+                    <table>
+                        <thead><tr><th>ID</th><th>Nome</th><th>Ações</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>Política</td><td><div class="actions"><button class="btn-icon edit"><i class="fas fa-edit"></i></button><button class="btn-icon delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                            <tr><td>2</td><td>Tecnologia</td><td><div class="actions"><button class="btn-icon edit"><i class="fas fa-edit"></i></button><button class="btn-icon delete"><i class="fas fa-trash"></i></button></div></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body></html>

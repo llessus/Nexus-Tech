@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca por Tag - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Fake News
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="busca_uf.html">Busca por UF</a>
+                <a href="busca_tag.html" class="active">Busca por Tag</a>
+                <a href="login.html" class="btn btn-primary" style="color: white;">Login / Cadastro</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header" style="flex-direction: column; align-items: flex-start; gap: 1.5rem;">
+            <h1 class="page-title">Explorar por Tópicos (Tags)</h1>
+            
+            <form style="display: flex; gap: 1rem; width: 100%; max-width: 600px;" onsubmit="event.preventDefault();">
+                <div style="flex: 1;">
+                    <input type="text" class="form-control" placeholder="Digite uma tag (ex: Tecnologia, Alienígenas...)" value="Tecnologia">
+                </div>
+                <button class="btn btn-primary">Buscar</button>
+            </form>
+            
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="tag" style="background: var(--accent-color); color: white;">Tecnologia</span>
+                <span class="tag">Política</span>
+                <span class="tag">Economia</span>
+                <span class="tag">Mundo</span>
+                <span class="tag">Comédia</span>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem; color: var(--text-secondary);">Resultados para a tag "Tecnologia"</h3>
+
+        <div class="grid">
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&q=80&w=400&h=200" alt="Notícia" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Tecnologia</span>
+                    <h2 class="card-title"><a href="detalhe_noticia.html">Novo smartphone precisa de pausa para o café</a></h2>
+                    <p class="card-meta">11 de Abril, 2026</p>
+                    <p class="card-text">Fabricante lança modelo com inteligência artificial "humana demais" que se recusa a processar dados entre as 15h e 15h30.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fake News.</p>
+    </footer>
+</body>
+</html>

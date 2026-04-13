@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Fake News
+            </a>
+        </div>
+    </nav>
+
+    <main class="container auth-container">
+        <div class="auth-card" style="max-width: 500px;">
+            <h2>Crie sua conta</h2>
+            
+            <form action="login.html" method="GET">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" class="form-control" placeholder="João da Silva" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" class="form-control" placeholder="Criar senha" required>
+                </div>
+
+                <div class="form-group" style="display: flex; gap: 1rem;">
+                    <div style="flex: 1;">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" class="form-control" placeholder="Sua cidade">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="uf">UF</label>
+                        <select id="uf" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="SP">SP</option>
+                            <option value="RJ">RJ</option>
+                            <option value="DF">DF</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Finalizar Cadastro</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 2rem; color: var(--text-secondary);">
+                Já tem uma conta? <a href="login.html">Faça login</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

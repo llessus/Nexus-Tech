@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Notícia - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Painel do Autor
+            </a>
+            <div class="nav-links">
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="minhas_noticias.html">Minhas Notícias</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Escrever Nova Notícia</h1>
+            <a href="minhas_noticias.html" class="btn btn-secondary">Voltar</a>
+        </div>
+
+        <form action="minhas_noticias.html" method="GET" class="auth-card" style="max-width: 100%; text-align: left;">
+            <div class="form-group">
+                <label>Título da Manchete</label>
+                <input type="text" class="form-control" placeholder="Crie um título chamativo..." required>
+            </div>
+
+            <div style="display: flex; gap: 1rem;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Tag (Categoria)</label>
+                    <select class="form-control" required>
+                        <option value="">Selecione...</option>
+                        <option value="Politica">Política</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Economia">Economia</option>
+                        <option value="Mundo">Mundo</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Estado Referente (UF)</label>
+                    <select class="form-control">
+                        <option value="BR">Nacional (Brasil)</option>
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                        <option value="DF">DF</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Imagem de Capa (URL temporária na falta de backend)</label>
+                <input type="url" class="form-control" placeholder="https://images.unsplash.com/..." value="https://images.unsplash.com/photo-1585829365295-ab7cd400c167">
+            </div>
+
+            <div class="form-group">
+                <label>Conteúdo da Notícia</label>
+                <textarea class="form-control" rows="12" placeholder="Desenvolva sua criatividade desinformativa aqui..." required></textarea>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <button type="button" onclick="window.location.href='minhas_noticias.html'" class="btn btn-secondary">Salvar como Rascunho</button>
+                <button type="submit" class="btn btn-primary">Solicitar Publicação (Enviar para Editor)</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

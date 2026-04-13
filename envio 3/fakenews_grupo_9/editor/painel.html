@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Editor - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--warning); padding: 0.5rem; border-radius: 8px; color: #000;">FN</div>
+                Painel do Editor
+            </a>
+            <div class="nav-links">
+                <a href="painel.html" class="active">Painel Principal</a>
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Moderação de Notícias</h1>
+            <p style="color: var(--text-secondary);">Aprove, despache ou edite notícias submetidas pelos autores.</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Autor</th>
+                        <th>Título</th>
+                        <th>Data Submissão</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>114</td>
+                        <td>Ana Silva</td>
+                        <td>Nova lei exige que gatos paguem imposto de renda sobre sachês</td>
+                        <td>14/04/2026</td>
+                        <td><span class="tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">Pendente</span></td>
+                        <td>
+                            <div class="actions">
+                                <a href="publicar_despublicar.html" class="btn-icon" title="Publicar/Despublicar" style="color: var(--success);"><i class="fas fa-check"></i></a>
+                                <button class="btn-icon delete" title="Rejeitar" onclick="confirm('Rejeitar e devolver ao autor?')"><i class="fas fa-times"></i></button>
+                                <a href="editar_qualquer_noticia.html" class="btn-icon edit" title="Editar Qualquer Notícia"><i class="fas fa-edit"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Admin Especialista</td>
+                        <td>Candidato promete construir ponte onde não há rio</td>
+                        <td>12/04/2026</td>
+                        <td><span class="tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">Publicada</span></td>
+                        <td>
+                            <div class="actions">
+                                <a href="publicar_despublicar.html" class="btn-icon delete" title="Despublicar"><i class="fas fa-ban"></i></a>
+                                <a href="editar_qualquer_noticia.html" class="btn-icon edit" title="Editar Qualquer Notícia"><i class="fas fa-edit"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

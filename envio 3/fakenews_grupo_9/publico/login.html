@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Fake News
+            </a>
+        </div>
+    </nav>
+
+    <main class="container auth-container">
+        <div class="auth-card">
+            <h2>Bem-vindo de volta!</h2>
+            
+            <form action="../autor/perfil.html" method="GET">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group flex-between">
+                    <label class="checkbox-group" style="margin: 0; cursor: pointer;">
+                        <input type="checkbox"> Lembrar de mim
+                    </label>
+                    <a href="lembrar.html" style="font-size: 0.875rem;">Esqueceu a senha?</a>
+                </div>
+
+                <!-- Botão de Login direcionando para o Perfil (Mock para demonstração do fluxo) -->
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Entrar</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 2rem; color: var(--text-secondary);">
+                Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a>
+            </div>
+
+            <!-- Ajuda de Navegação para a Banca/Avaliador -->
+            <div style="margin-top: 2rem; padding: 1rem; border-radius: 0.5rem; background: rgba(59, 130, 246, 0.1); border: 1px dashed var(--accent-color); font-size: 0.8rem; text-align: center;">
+                <p style="margin-bottom: 0.5rem; color: var(--accent-color); font-weight: bold;">Atalhos para avaliação (Simulador de Perfil):</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                    <a href="../leitor/perfil.html" class="tag">Leitor</a>
+                    <a href="../autor/perfil.html" class="tag">Autor</a>
+                    <a href="../editor/painel.html" class="tag">Editor</a>
+                    <a href="../superadmin/dashboard.html" class="tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">Superadmin</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

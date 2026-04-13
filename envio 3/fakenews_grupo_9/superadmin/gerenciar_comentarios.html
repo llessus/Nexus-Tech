@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gerenciar Comentários - Superadmin</title><link rel="stylesheet" href="../assets/css/estilo.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white}.crud-layout{display:flex;gap:2rem;align-items:flex-start}.crud-form{flex:1;background:var(--bg-secondary);padding:1.5rem;border-radius:1rem;border:1px solid var(--border-color);position:sticky;top:100px}.crud-list{flex:2}</style></head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container"><a href="dashboard.html" class="logo-link"><div style="background:white;padding:0.5rem;border-radius:8px;color:var(--danger)">SA</div>Superadmin</a></div>
+    </nav>
+    <main class="container">
+        <div class="page-header"><h1 class="page-title">Moderação Global de Comentários</h1><a href="dashboard.html" class="btn btn-secondary">Voltar ao Menu</a></div>
+        <div class="crud-layout">
+            <div class="crud-list" style="flex: 1;">
+                <div class="table-container">
+                    <table>
+                        <thead><tr><th>ID</th><th>Usuário</th><th>Notícia ID</th><th>Conteúdo</th><th>Ações</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>502</td><td>Maria A.</td><td>101</td><td>"Como assim ponte sem rio? E os pedágios?..."</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-icon edit" title="Esconder (Tornar invisível)" style="color:var(--warning)"><i class="fas fa-eye-slash"></i></button>
+                                        <button class="btn-icon delete" title="Apagar Definitivamente" style="color:var(--danger)"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>503</td><td>João Silva</td><td>101</td><td>"Eu sempre sonhei em ter uma ponte no..."</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-icon edit" style="color:var(--warning)"><i class="fas fa-eye-slash"></i></button>
+                                        <button class="btn-icon delete" style="color:var(--danger)"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</body></html>

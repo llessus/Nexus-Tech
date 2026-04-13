@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar / Despublicar - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--warning); padding: 0.5rem; border-radius: 8px; color: #000;">FN</div>
+                Painel do Editor
+            </a>
+            <div class="nav-links">
+                <a href="painel.html">Painel Principal</a>
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Publicar / Despublicar Notícia</h1>
+            <a href="painel.html" class="btn btn-secondary">Voltar</a>
+        </div>
+
+        <form action="painel.html" method="GET" class="auth-card" style="max-width: 600px; text-align: left;">
+            <div class="form-group">
+                <label>Notícia Selecionada</label>
+                <input type="text" class="form-control" value="Nova lei exige que gatos paguem imposto de renda sobre sachês" disabled style="opacity: 0.7;">
+            </div>
+
+            <div class="form-group">
+                <label>Autor</label>
+                <input type="text" class="form-control" value="Ana Silva" disabled style="opacity: 0.7;">
+            </div>
+
+            <div class="form-group">
+                <label>Status Atual</label>
+                <span class="tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning); display: inline-block; margin-top: 0.5rem;">Pendente de Revisão</span>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+                <label>Nova Ação</label>
+                <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                    <label style="flex: 1; border: 1px solid var(--border-color); padding: 1rem; border-radius: 8px; cursor: pointer;">
+                        <input type="radio" name="acao" value="publicar" checked style="margin-right: 0.5rem;">
+                        Aprovar e Publicar
+                    </label>
+                    <label style="flex: 1; border: 1px solid var(--border-color); padding: 1rem; border-radius: 8px; cursor: pointer;">
+                        <input type="radio" name="acao" value="despublicar" style="margin-right: 0.5rem;">
+                        Rejeitar / Despublicar
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Comentário do Editor (Opcional)</label>
+                <textarea class="form-control" rows="3" placeholder="Motivo da rejeição ou notas de publicação..."></textarea>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <button type="submit" class="btn btn-primary" style="background-color: var(--success); color: #fff; width: 100%;">Confirmar Ação</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

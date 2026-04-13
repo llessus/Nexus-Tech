@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Notícias - Autor - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <!-- Font Awesome Free via CDN para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Painel do Autor
+            </a>
+            <div class="nav-links">
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="minhas_noticias.html" class="active">Minhas Notícias</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Gerenciar Minhas Notícias</h1>
+            <a href="nova_noticia.html" class="btn btn-primary"><i class="fas fa-plus"></i> Nova Notícia</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Candidato promete construir ponte onde não há rio</td>
+                        <td>12/04/2026</td>
+                        <td><span class="tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">Publicada</span></td>
+                        <td>
+                            <div class="actions">
+                                <a href="../publico/detalhe_noticia.html" class="btn-icon" title="Ver no site"><i class="fas fa-eye"></i></a>
+                                <a href="editar_noticia.html" class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <button class="btn-icon delete" title="Apagar" onclick="confirm('Tem certeza?')"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Céu de Brasília é tombado como patrimônio imaterial da procrastinação contemplativa</td>
+                        <td>05/04/2026</td>
+                        <td><span class="tag" style="background: rgba(16, 185, 129, 0.1); color: var(--success);">Publicada</span></td>
+                        <td>
+                            <div class="actions">
+                                <a href="../publico/detalhe_noticia.html" class="btn-icon" title="Ver no site"><i class="fas fa-eye"></i></a>
+                                <a href="editar_noticia.html" class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <button class="btn-icon delete" title="Apagar" onclick="confirm('Tem certeza?')"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>112</td>
+                        <td>Gato pisa no teclado e acidentalmente aprova orçamento bilionário</td>
+                        <td>13/04/2026</td>
+                        <td><span class="tag" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">Rascunho</span></td>
+                        <td>
+                            <div class="actions">
+                                <a href="#" class="btn-icon" title="Ver mock" style="opacity: 0.5; pointer-events: none;"><i class="fas fa-eye"></i></a>
+                                <a href="editar_noticia.html" class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <button class="btn-icon delete" title="Apagar" onclick="confirm('Tem certeza?')"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

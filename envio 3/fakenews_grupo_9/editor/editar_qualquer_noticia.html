@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Qualquer Notícia - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--warning); padding: 0.5rem; border-radius: 8px; color: #000;">FN</div>
+                Painel do Editor
+            </a>
+            <div class="nav-links">
+                <a href="painel.html">Painel Principal</a>
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Editar Notícia (Modo Editor)</h1>
+            <a href="painel.html" class="btn btn-secondary">Voltar ao Painel</a>
+        </div>
+
+        <form action="painel.html" method="GET" class="auth-card" style="max-width: 100%; text-align: left;">
+            <div class="form-group">
+                <label>Autor Original</label>
+                <input type="text" class="form-control" value="Admin Especialista (ID: 101)" disabled style="opacity: 0.7;">
+            </div>
+
+            <div class="form-group">
+                <label>Título da Manchete</label>
+                <input type="text" class="form-control" value="Candidato promete construir ponte onde não há rio" required>
+            </div>
+
+            <div style="display: flex; gap: 1rem;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Tag (Categoria)</label>
+                    <select class="form-control" required>
+                        <option value="">Selecione...</option>
+                        <option value="Politica" selected>Política</option>
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Economia">Economia</option>
+                        <option value="Cotidiano">Cotidiano</option>
+                    </select>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Estado Referente (UF)</label>
+                    <select class="form-control">
+                        <option value="BR" selected>Nacional (Brasil)</option>
+                        <option value="DF">DF</option>
+                        <option value="SP">SP</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Alterar Status (Privilégio de Editor)</label>
+                <select class="form-control" required>
+                    <option value="Publicada" selected>Publicada</option>
+                    <option value="Pendente">Retornar para Revisão (Pendente)</option>
+                    <option value="Rejeitada">Rejeitada (Oculta)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Conteúdo da Notícia</label>
+                <textarea class="form-control" rows="8" required>Em um comício acalorado, o candidato surpreendeu a todos os presentes com uma proposta revolucionária de infraestrutura pública focada na estética rural. Segundo ele...</textarea>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <button type="submit" class="btn btn-primary" style="background-color: var(--warning); color: #000;">Salvar Alterações e Forçar Status</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

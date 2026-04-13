@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Usuários - Superadmin</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white}.crud-layout{display:flex;gap:2rem;align-items:flex-start}.crud-form{flex:1;background:var(--bg-secondary);padding:1.5rem;border-radius:1rem;border:1px solid var(--border-color);position:sticky;top:100px}.crud-list{flex:2}</style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="logo-link"><div style="background:white;padding:0.5rem;border-radius:8px;color:var(--danger)">SA</div>Superadmin</a>
+            <div class="nav-links"><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header" style="margin-bottom: 1rem;">
+            <h1 class="page-title">Gerenciar Usuários (CRUD)</h1>
+            <a href="dashboard.html" class="btn btn-secondary">Voltar ao Menu</a>
+        </div>
+
+        <div class="crud-layout">
+            <!-- Formulário (Create / Update) -->
+            <form class="crud-form" onsubmit="event.preventDefault(); alert('Ação Executada');">
+                <h3 style="margin-bottom: 1.5rem; color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Adicionar / Editar Usuário</h3>
+                
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" class="form-control" placeholder="Nome do Usuário">
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" class="form-control" placeholder="email@exemplo.com">
+                </div>
+                <div class="form-group">
+                    <label>Perfil de Acesso</label>
+                    <select class="form-control">
+                        <option value="leitor">Leitor</option>
+                        <option value="autor">Autor</option>
+                        <option value="editor">Editor</option>
+                        <option value="superadmin">Superadmin</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control">
+                </div>
+                
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;"><i class="fas fa-save"></i> Salvar</button>
+                    <button type="reset" class="btn btn-secondary" style="flex: 1;"><i class="fas fa-undo"></i> Limpar</button>
+                </div>
+            </form>
+
+            <!-- Tabela (Read / Delete) -->
+            <div class="crud-list">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Perfil</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>João Silva</td>
+                                <td>joao@exemplo.com</td>
+                                <td><span class="tag">Leitor</span></td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-icon edit" title="Editar para o painel ao lado"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Apagar"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Admin Oculto</td>
+                                <td>admin@fakenews.com</td>
+                                <td><span class="tag" style="background:var(--danger);color:white">Superadmin</span></td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-icon edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="text-align: right; margin-top: 1rem; color: var(--text-muted); font-size: 0.8rem;">** No HTML estático, clique em Editar para simular envio para o painel lado a lado.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

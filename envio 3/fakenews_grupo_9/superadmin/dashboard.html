@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Superadmin - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .admin-nav { background-color: var(--danger); }
+        .admin-nav .logo-link { color: white; }
+        .stat-card { text-align: center; padding: 2rem; }
+        .stat-card h3 { font-size: 3rem; color: var(--danger); margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: white; padding: 0.5rem; border-radius: 8px; color: var(--danger);">SA</div>
+                Superadmin
+            </a>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active" style="color: white;">Dashboard</a>
+                <a href="../index.html" class="btn btn-secondary" style="background: white; color: var(--danger);">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Bem-vindo, Administrador Supremo</h1>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 3rem;">
+            <div class="card stat-card">
+                <h3>142</h3>
+                <p class="text-secondary">Notícias Ativas</p>
+            </div>
+            <div class="card stat-card">
+                <h3>5.2k</h3>
+                <p class="text-secondary">Usuários</p>
+            </div>
+            <div class="card stat-card">
+                <h3>8</h3>
+                <p class="text-secondary">Tags</p>
+            </div>
+            <div class="card stat-card">
+                <h3>1.1k</h3>
+                <p class="text-secondary">Comentários</p>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 1.5rem;">Gerenciamento do Sistema (CRUDs)</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+            <a href="crud_usuarios.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-users" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Usuários</h3>
+                <p class="card-meta">Leitores, Autores, Editores</p>
+            </a>
+            <a href="crud_noticias.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-newspaper" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Notícias</h3>
+                <p class="card-meta">Acesso total ao bd de notícias</p>
+            </a>
+            <a href="crud_cidades.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-city" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Cidades</h3>
+                <p class="card-meta">Cidades mapeadas</p>
+            </a>
+            <a href="crud_uf.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-map" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Estados (UF)</h3>
+                <p class="card-meta">Gerenciar UFs</p>
+            </a>
+            <a href="crud_tags.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-tags" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Tags</h3>
+                <p class="card-meta">Categorias de notícias</p>
+            </a>
+            <a href="crud_perfis.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-id-badge" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Perfis / Níveis</h3>
+                <p class="card-meta">Níveis de Permissão</p>
+            </a>
+            <a href="gerenciar_comentarios.html" class="card" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-comments" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                <h3 class="card-title">Comentários</h3>
+                <p class="card-meta">Moderação geral</p>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

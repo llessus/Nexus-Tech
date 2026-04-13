@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembrar Senha - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <div style="background: var(--accent-color); padding: 0.5rem; border-radius: 8px;">FN</div>
+                Fake News
+            </a>
+        </div>
+    </nav>
+
+    <main class="container auth-container">
+        <div class="auth-card" style="max-width: 500px;">
+            <h2>Esqueceu a senha?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Informe seu e-mail abaixo e enviaremos um link para você redefinir sua senha.</p>
+            
+            <form action="login.html" method="GET">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Enviar Link</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 2rem; color: var(--text-secondary);">
+                Lembrou a senha? <a href="login.html">Voltar para o Login</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
