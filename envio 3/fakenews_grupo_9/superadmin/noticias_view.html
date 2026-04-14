@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Notícia - Superadmin</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white} .detail-card { max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: 2.5rem; border-radius: 1rem; border: 1px solid var(--border-color); }</style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="logo-link"><img src="../assets/images/logo.png" class="logo-img" alt="Logo">Superadmin</a>
+            <div class="nav-links"><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Detalhes da Notícia</h1>
+            <div style="display: flex; gap: 1rem;">
+                <a href="noticias_edit.html?id=253" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                <a href="noticias_list.html" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+
+        <div class="detail-card">
+            <h2 style="margin-bottom: 1.5rem; line-height: 1.2;">Nova lei aprovada gera polêmica entre especialistas</h2>
+            
+            <div style="display: flex; gap: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; color: var(--text-muted);">
+                <span><i class="fas fa-user"></i> ID Autor: 102</span>
+                <span><i class="fas fa-calendar"></i> Data: 12/04/2026</span>
+                <span><i class="fas fa-check-circle"></i> Status: <span class="tag">Publicada</span></span>
+            </div>
+
+            <div style="color: var(--text-secondary); line-height: 1.8;">
+                <p>O texto integral da notícia seria exibido aqui para revisão do administrador supremo. Neste painel, ele pode verificar se a notícia cumpre as diretrizes da plataforma antes de ser moderada ou removida.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

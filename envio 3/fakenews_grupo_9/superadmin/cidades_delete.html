@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Cidade - Superadmin</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white} .delete-card { max-width: 500px; margin: 5rem auto; background: var(--bg-secondary); padding: 3rem; border-radius: 1rem; border: 1px solid var(--danger); text-align: center; } .warning-icon { font-size: 4rem; color: var(--danger); margin-bottom: 1.5rem; }</style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="logo-link"><img src="../assets/images/logo.png" class="logo-img" alt="Logo">Superadmin</a>
+            <div class="nav-links"><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="delete-card">
+            <div class="warning-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h2 style="margin-bottom: 1rem;">Confirmar Exclusão</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Você tem certeza que deseja excluir a cidade <strong>São Paulo (SP)</strong>?<br>
+                Isso pode afetar o filtro de notícias relacionadas a esta cidade.
+            </p>
+            
+            <form onsubmit="event.preventDefault(); alert('Cidade excluída!'); window.location.href='cidades_list.html';">
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <button type="submit" class="btn btn-danger" style="flex: 1;"><i class="fas fa-trash"></i> Sim, Excluir</button>
+                    <a href="cidades_list.html" class="btn btn-secondary" style="flex: 1;">Não, Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+

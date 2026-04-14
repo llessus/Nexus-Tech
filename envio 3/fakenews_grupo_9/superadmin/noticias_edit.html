@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Notícia - Superadmin</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white} .form-card { max-width: 800px; margin: 0 auto; background: var(--bg-secondary); padding: 2rem; border-radius: 1rem; border: 1px solid var(--border-color); }</style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="logo-link"><img src="../assets/images/logo.png" class="logo-img" alt="Logo">Superadmin</a>
+            <div class="nav-links"><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Editar Notícia #253</h1>
+            <a href="noticias_list.html" class="btn btn-secondary">Cancelar</a>
+        </div>
+
+        <div class="form-card">
+            <form onsubmit="event.preventDefault(); alert('Notícia atualizada!'); window.location.href='noticias_list.html';">
+                <div class="form-group">
+                    <label>Título da Notícia</label>
+                    <input type="text" class="form-control" value="Nova lei aprovada gera polêmica entre especialistas" required>
+                </div>
+                <div class="form-group">
+                    <label>Autor Responsável (ID)</label>
+                    <input type="number" class="form-control" value="102" required>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select class="form-control">
+                        <option selected>Publicada</option>
+                        <option>Pendente</option>
+                        <option>Rascunho</option>
+                    </select>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;"><i class="fas fa-save"></i> Salvar Alterações</button>
+                    <a href="noticias_list.html" class="btn btn-secondary" style="flex: 1;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+

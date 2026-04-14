@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Usuário - Superadmin</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white} .detail-card { max-width: 600px; margin: 0 auto; background: var(--bg-secondary); padding: 2.5rem; border-radius: 1rem; border: 1px solid var(--border-color); } .detail-item { margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); } .detail-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; } .detail-value { font-size: 1.1rem; font-weight: 500; }</style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="logo-link"><img src="../assets/images/logo.png" class="logo-img" alt="Logo">Superadmin</a>
+            <div class="nav-links"><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Detalhes do Usuário</h1>
+            <div style="display: flex; gap: 1rem;">
+                <a href="usuarios_edit.html?id=1" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                <a href="usuarios_list.html" class="btn btn-secondary">Voltar à Lista</a>
+            </div>
+        </div>
+
+        <div class="detail-card">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <i class="fas fa-user-circle" style="font-size: 5rem; color: var(--accent-color);"></i>
+            </div>
+            
+            <div class="detail-item">
+                <div class="detail-label">ID do Usuário</div>
+                <div class="detail-value">#1</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Nome Completo</div>
+                <div class="detail-value">João Silva</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">E-mail</div>
+                <div class="detail-value">joao@exemplo.com</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Perfil de Acesso</div>
+                <div class="detail-value"><span class="tag">Leitor</span></div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Data de Cadastro</div>
+                <div class="detail-value">12 de Outubro, 2025</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Status</div>
+                <div class="detail-value" style="color: var(--success);">Ativo</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

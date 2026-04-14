@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Minha Notícia - Autor - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logo.png" class="logo-img" alt="Logo">
+                Painel do Autor
+            </a>
+            <div class="nav-links">
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="minhas_noticias.html" class="active">Minhas Notícias</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Visualizar Notícia</h1>
+            <div style="display: flex; gap: 1rem;">
+                <a href="editar_noticia.html" class="btn btn-primary"><i class="fas fa-edit"></i> Editar</a>
+                <a href="minhas_noticias.html" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+
+        <div class="card" style="padding: 2.5rem; background: var(--bg-secondary);">
+            <div style="margin-bottom: 2rem;">
+                <span class="tag" style="margin-bottom: 1rem;">Publicada</span>
+                <h2 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem;">Candidato promete construir ponte onde não há rio</h2>
+                <p style="color: var(--text-muted);">Escrito por você em 12 de Abril, 2026</p>
+            </div>
+
+            <div style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                <p>Esta é a visão interna da sua notícia. Aqui você pode conferir como o texto está formatado antes ou depois da publicação.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

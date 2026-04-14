@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentar - Autor - Fake News</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logo.png" class="logo-img" alt="Logo">
+                Painel do Autor
+            </a>
+            <div class="nav-links">
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="minhas_noticias.html">Minhas Notícias</a>
+                <a href="../index.html" class="btn btn-secondary">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="max-width: 800px;">
+        <article>
+            <span class="tag" style="margin-bottom: 1rem;">Política</span>
+            <h1 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; color: var(--text-primary);">
+                Candidato promete construir ponte onde não há rio
+            </h1>
+            
+            <div style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 3rem;">
+                <p>Resumo da notícia para contexto de comentário (visão de autor)...</p>
+            </div>
+
+            <div class="comment-section">
+                <h3>Deixe seu Comentário</h3>
+                
+                <form onsubmit="event.preventDefault(); alert('Comentário publicado (autores não passam por moderação)!'); window.location.href='perfil.html';" style="margin: 2rem 0;">
+                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <img src="https://ui-avatars.com/api/?name=Autor+Experiente&background=3B82F6&color=fff" alt="Você" class="avatar">
+                        <div style="flex: 1;">
+                            <textarea class="form-control" rows="4" placeholder="Adicione seu ponto de vista como autor..." required></textarea>
+                            <div style="text-align: right; margin-top: 1rem;">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Publicar Comentário</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Outros Comentários (1)</h3>
+                <div class="comment">
+                    <img src="https://ui-avatars.com/api/?name=João+Silva&background=0D8ABC&color=fff" alt="João Silva" class="avatar">
+                    <div class="comment-content">
+                        <h4>João Silva</h4>
+                        <div class="comment-date">Há 2 horas</div>
+                        <p style="color: var(--text-secondary);">Eu sempre sonhei em ter uma ponte no meu quintal sem o perigo de enchente. Gênio!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
+

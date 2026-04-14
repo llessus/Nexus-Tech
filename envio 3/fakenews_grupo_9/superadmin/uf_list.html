@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar UFs - Superadmin</title>
+    <link rel="stylesheet" href="../assets/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>.admin-nav{background-color:var(--danger)}.admin-nav .logo-link{color:white}</style>
+</head>
+<body>
+    <nav class="navbar admin-nav">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="logo-link"><img src="../assets/images/logo.png" class="logo-img" alt="Logo">Superadmin</a>
+            <div class="nav-links"><a href="dashboard.html" style="color:white;">Dashboard</a></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Listar Estados (UF)</h1>
+            <div style="display: flex; gap: 1rem;">
+                <a href="uf_create.html" class="btn btn-primary"><i class="fas fa-plus"></i> Nova UF</a>
+                <a href="dashboard.html" class="btn btn-secondary">Voltar</a>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Sigla</th>
+                        <th>Nome do Estado</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>SP</td>
+                        <td>São Paulo</td>
+                        <td>
+                            <div class="actions">
+                                <a href="uf_view.html?id=1" class="btn-icon" title="Exibir"><i class="fas fa-eye"></i></a>
+                                <a href="uf_edit.html?id=1" class="btn-icon edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <a href="uf_delete.html?id=1" class="btn-icon delete" title="Apagar"><i class="fas fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
+
