@@ -1,0 +1,31 @@
+import type { UF } from '../types';
+
+export const ufs: UF[] = [
+  { id: 1, sigla: 'SP', nome: 'São Paulo' },
+  { id: 2, sigla: 'RJ', nome: 'Rio de Janeiro' },
+  { id: 3, sigla: 'MG', nome: 'Minas Gerais' },
+  { id: 4, sigla: 'BA', nome: 'Bahia' },
+  { id: 5, sigla: 'PR', nome: 'Paraná' },
+  { id: 6, sigla: 'RS', nome: 'Rio Grande do Sul' },
+  { id: 7, sigla: 'PE', nome: 'Pernambuco' },
+  { id: 8, sigla: 'CE', nome: 'Ceará' },
+  { id: 9, sigla: 'PA', nome: 'Pará' },
+  { id: 10, sigla: 'SC', nome: 'Santa Catarina' },
+  { id: 11, sigla: 'GO', nome: 'Goiás' },
+  { id: 12, sigla: 'MA', nome: 'Maranhão' },
+  { id: 13, sigla: 'PB', nome: 'Paraíba' },
+  { id: 14, sigla: 'ES', nome: 'Espírito Santo' },
+  { id: 15, sigla: 'AM', nome: 'Amazonas' },
+  { id: 16, sigla: 'MT', nome: 'Mato Grosso' },
+  { id: 17, sigla: 'RN', nome: 'Rio Grande do Norte' },
+  { id: 18, sigla: 'PI', nome: 'Piauí' },
+  { id: 19, sigla: 'AL', nome: 'Alagoas' },
+  { id: 20, sigla: 'DF', nome: 'Distrito Federal' },
+  { id: 21, sigla: 'MS', nome: 'Mato Grosso do Sul' },
+  { id: 22, sigla: 'SE', nome: 'Sergipe' },
+  { id: 23, sigla: 'RO', nome: 'Rondônia' },
+  { id: 24, sigla: 'TO', nome: 'Tocantins' },
+  { id: 25, sigla: 'AC', nome: 'Acre' },
+  { id: 26, sigla: 'AP', nome: 'Amapá' },
+  { id: 27, sigla: 'RR', nome: 'Roraima' }
+];
